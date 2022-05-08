@@ -54,7 +54,7 @@ def get_single_song(bot, update):
     logging.log(logging.INFO, 'sending to client')
     try:
         sent = 0 
-        bot.send_message(chat_id=chat_id, text="Sending to Spotify Downloader Channel...")
+        bot.send_message(chat_id=chat_id, text="Sending to Spotify Downloader Channel... not in there? join now!: @spotifymusicforfree")
         files = [os.path.join(dp, f) for dp, dn, filenames in os.walk(".") for f in filenames if os.path.splitext(f)[1] == '.mp3']
         for file in files:
             bot.send_audio(chat_id='@spotifymusicforfree', audio=open(f'./{file}', 'rb'), timeout=1000)
