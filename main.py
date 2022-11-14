@@ -59,6 +59,7 @@ def get_single_song(bot, update):
         for file in files:
             bot.send_audio(chat_id='@spotifymusicforfree', audio=open(f'./{file}', 'rb'), timeout=1000)
             sent += 1
+            os.remove(filename)
     except:
         pass
 
